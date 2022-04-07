@@ -1,0 +1,16 @@
+---
+---
+
+// You can write SCSS here! Including these SCSS-style double-slash comment, which would NOT be
+// valid in CSS.
+// To use SCSS, just keep the two lines of triple dashes above, and add them to the very top of any
+// other .scss file you might create.
+
+// First, import the reset-styles partial:
+@import "reset";
+
+// Other styles or partial imports go here...
+// Keep your partials in the `_scss/` directory, and name them with an opening underscore, e.g.,
+// `_colors.scss`, which you'd then be able to import with `@import "colors";`
+
+// Never written SCSS before? Have a look at https://sass-lang.com/guide

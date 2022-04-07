@@ -1,0 +1,22 @@
+# See Jekyll's `_config.yml` configuration options at
+# https://jekyllrb.com/docs/configuration/
+# Especially:
+# * Configuration options: https://jekyllrb.com/docs/configuration/options/
+# * Default configuration values: https://jekyllrb.com/docs/configuration/default/
+
+# Set this to match your GitHub repo name if not working with <username>.github.io
+# You'll have to preview your site locally at http://localhost:4000/<REPO_NAME>/
+# baseurl: /<REPO_NAME>/
+
+# Set the correct timezone; defaulting to Illinois Tech's America/Chicago
+# Consult the list at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Chicago
+
+# "Safe" mode most closely approximates how the site will build on GitHub.io:
+safe: true
+
+# Files to exclude from built Jekyll site
+exclude:
+  - .keep
+  - Gemfile*
+  - README.md

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>{{ page.title }}: {{ site.data.custom.title }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="{{ "/assets/css/screen.css" | relative_url }}" />
+  {%- comment -%}
+    OpenGraph Basics; see https://ogp.me/
+  {% endcomment %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:title" content="{{ page.title }}: {{ site.data.custom.title }}" />
+  <meta property="og:type" content="website" />
+  {% if page.og.description %}
+  <meta property="og:description" content="{{ page.og.description }}" />
+  {%- endif -%}
+  {% if page.og.image %}
+  <meta property="og:image" content="{{ "/assets/img/" | absolute_url }}{{ page.og.image.file }}" />
+  <meta property="og:image:type" content="{{ page.og.image.type }}" />
+  {% endif %}
+</head>
+<body>
+
+  <header id="header">
+    <h1><a href="{{ "/" | absolute_url }}">{{ site.data.custom.title }}</a></h1>
+
+    {% if site.data.custom.navigation %}
+    {% include navigation.html %}
+    {% endif %}
+
+  </header>
+
+  {{ content }}
+
+  <footer id="footer">
+
+    {%- comment -%}
+      Sneaky workaround to inject custom values into other YAML data; see
+      https://shopify.github.io/liquid/filters/replace/
+    {%- endcomment -%}
+
+    {%- capture year -%}{{ 'now' | date: "%Y" }}{%- endcapture -%}
+    {{ site.data.microcopy.footer
+      | replace: "!AUTHOR_NAME!", site.data.custom.author.name
+      | replace: "!YEAR!", year
+      | markdownify
+    }}
+
+  </footer>
+
+  <script src="{{ "/assets/js/site.js" | relative_url }}"></script>
+</body>
+</html>

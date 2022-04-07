@@ -1,0 +1,10 @@
+<nav id="navigation">
+  <ul>
+  {% for file in site.data.custom.navigation %}
+    {%- assign nav = site.pages | where: "name", file -%}
+    {% for item in nav %}
+    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  {% endfor %}
+  </ul>
+</nav>

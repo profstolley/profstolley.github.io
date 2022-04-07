@@ -1,0 +1,5 @@
+# Custom, reusable copy
+# Access in templates via `site.data.microcopy`
+
+footer: >
+  Site © !YEAR! by !AUTHOR_NAME!.

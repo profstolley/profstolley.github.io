@@ -1,0 +1,20 @@
+# Custom site-wide data, in lieu of modifying (and risking conflict) with `_config.yml`
+
+# Custom `author` property
+
+author:
+  name: &name Scarlet Hawk
+  email: scarlet.hawk@iit.example.edu
+  github: https://github.com/scarlet_hawk
+
+# Replacement for `site.title`, from `_config.yml`
+# Reference `site.data.custom.title` instead
+title: *name
+
+# Uncomment to use with the navigation include in `_includes/`
+# Pages will be listed in the order shown here:
+
+#navigation:
+#  - index.md
+#  - resume.md
+#  - projects.md
