@@ -17,7 +17,7 @@ title: *name
 # Uncomment to use with the navigation include in `_includes/`
 # Pages will be listed in the order shown here:
 
-#navigation:
-#  - index.md
-#  - resume.md
-#  - projects.md
+navigation:
+  - resume.md
+  - projects.md
+  - index.md
